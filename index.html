@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>فروشگاه نهایی</title>
+  <!-- توصیه: اگر می توانید این فونت را اضافه کنید، ظاهر نهایی عالی می شود -->
+  <!-- <link href="https://cdn.fontcdn.ir/Vazirmatn.css" rel="stylesheet" /> -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>💎 فروشگاه فوق حرفه‌ای</h1>
+    <div class="header-controls">
+        <input type="text" id="search" placeholder="جست‌وجو بر اساس نام محصول..." />
+        <button id="cart-toggle" onclick="toggleCart()">🛒 سبد خرید (۰)</button>
+    </div>
+  </header>
+
+  <section id="filters">
+    <p>فیلتر:</p>
+    <button onclick="applyFilterAndRender('همه')">همه</button>
+    <button onclick="applyFilterAndRender('پوشاک')">پوشاک</button>
+    <button onclick="applyFilterAndRender('اکسسوری')">اکسسوری</button>
+    <button onclick="applyFilterAndRender('دیجیتال')">دیجیتال</button>
+  </section>
+
+  <main>
+    <div id="products" class="product-grid">
+        <!-- محتوای محصولات اینجا لود می‌شود -->
+    </div>
+  </main>
+
+  <!-- سبد خرید Sidebar -->
+  <aside id="cart-sidebar" class="cart hidden">
+    <div class="cart-header">
+        <h2>سبد خرید شما</h2>
+        <button class="close-btn" onclick="toggleCart()">×</button>
+    </div>
+    <ul id="cart-items"></ul>
+    <div class="cart-footer">
+        <p><strong>جمع نهایی:</strong> <span id="total">0</span> تومان</p>
+        <button id="clear-cart">🗑 پاک کردن سبد</button>
+        <button id="checkout-btn">✅ ثبت سفارش</button>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+/* ... (قسمت‌های قبلی Header و Filters یکسان باقی می‌ماند) ... */
+
+body {
+  font-family: Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f7f9;
+  direction: rtl;
+  color: #333;
+  transition: background 0.5s; /* انیمیشن پس‌زمینه */
+}
+
+header {
+  background: #0a142c; /* مشکی بسیار تیره */
+  color: white;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+/* ... سایر استایل‌های Header و Header-controls ... */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* کمی عریض‌تر */
+  gap: 25px;
+  padding: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px; /* گردتر */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.card:hover {
+    transform: translateY(-8px); /* حرکت بیشتر به بالا */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  height: 180px; /* قد تصویر کمی بلندتر */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+button.add {
+  background: #0056b3; /* آبی عمیق‌تر */
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 1.05em;
+  margin-top: auto; /* مطمئن شدن از قرارگیری در پایین کارت */
+}
+
+/* استایل سبد خرید (Sidebar) */
+.cart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px; /* کمی عریض‌تر */
+    height: 100%;
+    background: #fdfdfd;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    padding: 25px;
+    box-sizing: border-box;
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* انیمیشن فنری (Springy) */
+    overflow-y: auto;
+}
+
+.cart.hidden {
+    transform: translateX(350px);
+}
+/* ... بقیه استایل‌های Cart یکسان با نسخه قبل ... */
